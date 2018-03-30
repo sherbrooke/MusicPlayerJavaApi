@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sher.music.mapper.MusicMapper">
+	<resultMap id="BaseResultMap" type="com.sher.music.entity.Music">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="album" property="album" jdbcType="VARCHAR" />
+		<result column="album_id" property="alumbId" jdbcType="INTEGER" />
+		<result column="url" property="url" jdbcType="VARCHAR" />
+		<result column="artist" property="artist" jdbcType="VARCHAR" />
+		<result column="duration" property="duration" jdbcType="INTEGER" />
+		<result column="pic" property="pic" jdbcType="VARCHAR" />
+	</resultMap>
+
+
+	<select id="getNewMusic"
+			resultMap="BaseResultMap">
+		select * from new_music where 1=1
+	</select>
+	<select id="getHotMusic"
+			resultMap="BaseResultMap">
+		select * from hot_music where 1=1
+	</select>
+	<select id="getBillBoardMusic"
+			resultMap="BaseResultMap">
+		select * from billboard_music where 1=1
+	</select>
+	<select id="getPopMusic"
+			resultMap="BaseResultMap">
+		select * from pop_music where 1=1
+	</select>
+
+</mapper>
