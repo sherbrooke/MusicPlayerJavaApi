@@ -20,9 +20,9 @@ public class MusicServiceImpl implements MusicService{
 
     public List<List<Music>> getMusic(){
         List<Music> newMusicList = musicMapper.getNewMusic();
-        List<Music> hotMusicList = musicMapper.getNewMusic();
-        List<Music> billboardMusicList = musicMapper.getNewMusic();
-        List<Music> popMusicList = musicMapper.getNewMusic();
+        List<Music> hotMusicList = musicMapper.getHotMusic();
+        List<Music> billboardMusicList = musicMapper.getBillBoardMusic();
+        List<Music> popMusicList = musicMapper.getPopMusic();
 
         List<List<Music>> musicList = new ArrayList<List<Music>>();
         musicList.add(newMusicList);

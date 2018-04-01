@@ -15,7 +15,7 @@ public class MusicController {
     @Autowired
     private MusicService musicService;
 
-    @RequestMapping(value = "/music/test")
+    @RequestMapping(value = "/music")
     public @ResponseBody
     List<List<Music>> getMusic(){
         return musicService.getMusic();
